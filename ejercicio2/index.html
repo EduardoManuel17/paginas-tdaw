@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Portafolio — Eduardo Manuel Padilla Niño</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; }
+    body { margin: 0; }
+    header { background: #f2f2f2; padding: 16px; text-align: center; }
+    header h1 { margin: 0; font-size: 1.6rem; }
+    nav { margin-top: 6px; }
+    nav a { text-decoration: none; color: #333; margin: 0 .5rem; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 960px; margin: 0 auto; padding: 20px 16px; }
+    section { margin: 32px 0; }
 
+    .perfil { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .perfil img { width: 200px; height: 200px; border-radius: 8px; object-fit: cover; }
+
+    .galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .galeria img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+    figure { margin: 0; }
+    figcaption { font-size: .9rem; opacity: .8; text-align: center; margin-top: 6px; }
+
+    iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; }
+
+    form { max-width: 560px; }
+    .campo { display: grid; gap: 6px; margin-bottom: 12px; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button { padding: 10px 14px; border: 1px solid #333; background: #fff; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #f5f5f5; }
+
+    footer { text-align: center; padding: 16px; background: #fafafa; color: #555; }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <h1>Mi Portafolio</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <h2 id="sobre-mi-titulo">Presentación</h2>
+      <div class="perfil">
+        <img src="perfil.jpg" alt="Foto de Eduardo Manuel Padilla Niño" width="200" height="200">
+        <div>
+          <p>Hola, soy Eduardo Manuel Padilla Niño. Esta es una práctica de HTML.</p>
+          <h3>Intereses</h3>
+          <ul>
+            <li>Desarrollo web</li>
+            <li>Videojuegos</li>
+            <li>Fotografía</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" aria-labelledby="galeria-titulo">
+      <h2 id="galeria-titulo">Galería</h2>
+
+      <div class="galeria">
+        <figure>
+          <img src="foto1.jpg" alt="Imagen 1">
+          <figcaption>Imagen 1</figcaption>
+        </figure>
+        <figure>
+          <img src="foto2.jpg" alt="Imagen 2">
+          <figcaption>Imagen 2</figcaption>
+        </figure>
+        <figure>
+          <img src="foto3.jpg" alt="Imagen 3">
+          <figcaption>Imagen 3</figcaption>
+        </figure>
+        <figure>
+          <img src="foto4.jpg" alt="Imagen 4">
+          <figcaption>Imagen 4</figcaption>
+        </figure>
+      </div>
+
+      <h3>Video</h3>
+      <iframe
+        src="https://www.youtube.com/embed/1RrrRWrDJw4"
+        title="Video de YouTube"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <h3>Audio</h3>
+      <audio controls preload="metadata">
+        <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+      </audio>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo">Contacto</h2>
+      <form action="#" method="get">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Eduardo Manuel Padilla Niño — <a href="mailto:epadillanino@gmail.com">epadillanino@gmail.com</a>
+  </footer>
+</body>
+</html>
